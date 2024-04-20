@@ -7,6 +7,8 @@ import CategoryFilter from './Components/CategoryFilter';
 import AddProduct from './Components/AddProduct';
 import PageNotFound from './Components/PageNotFound';
 import CustomerSupport from './Components/CustomerSupport';
+import Login from './Components/Login';
+import Register from './Components/Register';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path='/navigate' element={<SearchResults />} />
           <Route path='/add-product' element={<AddProduct/>}/>
           <Route path="/support" element={<CustomerSupport />} />
+          <Route path='/login' element={<Login/>} />
+          <Route path='/register' element={<Register/>} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
