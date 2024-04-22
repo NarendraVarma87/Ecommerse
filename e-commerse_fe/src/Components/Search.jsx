@@ -24,7 +24,7 @@ const Search = () => {
           type="number"
           value={priceSearch}
           onChange={(e) => setPriceSearch(e.target.value)}
-          placeholder="Search"
+          placeholder="Search by price"
           aria-label="Search"
         />
         <button className="btn btn-outline-success" type="submit">Search</button>

@@ -56,7 +56,10 @@ const Register = () => {
 />
 
         <br />
-        <input type="submit" value="Register" className="form-control btn btn-outline-info mb-4 p-2 mx-1"/>
+        <div className='d-flex justify-content-center'>
+          <input type="submit" value="Register" className="form-control btn btn-outline-info mb-4 p-2 mx-1 w-50"/>
+        </div>
+        
       </form>
     </div>
   )
