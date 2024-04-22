@@ -28,6 +28,7 @@ const CategoryFilter = () => {
         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <li><button className="dropdown-item" onClick={() => handleCategoryChange('mobiles')}>Mobiles</button></li>
           <li><button className="dropdown-item" onClick={() => handleCategoryChange('books')}>Books</button></li>
+          <li><button className="dropdown-item" onClick={() => handleCategoryChange('shoes')}>Shoes</button></li>
         </ul>
       </div>
 
