@@ -21,7 +21,7 @@ const CategoryFilter = () => {
 
   return (
     <div>
-      <div className="dropdown">
+      <div className="dropdown d-flex justify-content-center m-3">
         <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
           Select Category
         </button>
