@@ -26,11 +26,11 @@ const Login = () => {
             userPassword: ''
           });
           setTimeout(() => {
-            navigate('/');
+            navigate('/home');
           }, 3000);
         } else {
           setShowErrorMessage(true);
-          setTimeout(()=>{navigate('/login')},2000);
+          setTimeout(()=>{navigate('/')},2000);
         }
       })
       .catch((error) => {

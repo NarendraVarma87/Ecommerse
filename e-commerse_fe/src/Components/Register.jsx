@@ -21,7 +21,7 @@ const Register = () => {
       const response = await axios.post('http://localhost:9015/user/add-user', register);
       console.log(response.data);
       setShowRegisterMessage(true);
-      setTimeout(()=>{ navigate('/login');},3000)
+      setTimeout(()=>{ navigate('/');},3000)
     } catch (error) {
       console.error('Error during registration:', error.response?.data || error.message);
     }

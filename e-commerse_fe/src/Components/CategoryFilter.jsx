@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const CategoryFilter = () => {
+  const navigate = useNavigate();
   const [productsData, setProductsData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
 
@@ -18,6 +20,9 @@ const CategoryFilter = () => {
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
   };
+  const handleClick = (productId) =>{
+    navigate(`/get/${productId}`);
+  }
 
   return (
     <div>
@@ -36,7 +41,7 @@ const CategoryFilter = () => {
         {productsData.map(item => (
           <div key={item.id} className="col btn">
             <div className="card">
-              <img src={item.productUrl} alt={item.productId} className="card-img-top prodImg"/>
+              <img src={item.productUrl} alt={item.productId} onClick={()=>handleClick(item.productId)} className="card-img-top prodImg"/>
               <div className="card-body">
                 <h5 className="card-title">{item.productTitle}</h5>
                 <p className="card-text">Inc offers</p>
