@@ -9,6 +9,7 @@ import PageNotFound from './Components/PageNotFound';
 import CustomerSupport from './Components/CustomerSupport';
 import Login from './Components/Login';
 import Register from './Components/Register';
+import MainComponent from './Components/MainComponent';
 
 function App() {
   return (
@@ -16,12 +17,13 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path='/' element={<Products />} />
+          <Route path='/home' element={<Products />} />
           <Route path='/filter' element={<CategoryFilter />} />
           <Route path='/navigate' element={<SearchResults />} />
           <Route path='/add-product' element={<AddProduct/>}/>
           <Route path="/support" element={<CustomerSupport />} />
-          <Route path='/login' element={<Login/>} />
+          <Route path="/get/:productId" element={<MainComponent/>}/>
+          <Route path='/' element={<Login/>} />
           <Route path='/register' element={<Register/>} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
