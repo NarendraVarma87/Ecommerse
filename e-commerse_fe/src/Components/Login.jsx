@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const Login = () => {
+const Login = ({setUsername}) => {
   let navigate = useNavigate();
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
@@ -21,6 +21,7 @@ const Login = () => {
       .then((res) => {
         if (res.data.userPassword === user.userPassword) {
           setShowSuccessMessage(true);
+          setUsername(user.userName);
           setUser({
             userName: '',
             userPassword: ''

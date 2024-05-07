@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from './Search';
 import { Link } from 'react-router-dom';
-const Navbar = () => {
+const Navbar = ({ username }) => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -16,7 +16,7 @@ const Navbar = () => {
                 <Link to="/" className="nav-link active" aria-current="page" >Login</Link>
               </li>
               <li className="nav-item mx-3">
-                <a className="nav-link" href="#">Link</a>
+                   <Link to='/profile' className="nav-link active" aria-current="page" >{username}</Link>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
