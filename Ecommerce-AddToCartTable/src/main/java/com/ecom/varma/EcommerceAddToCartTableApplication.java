@@ -1,0 +1,15 @@
+package com.ecom.varma;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+
+@SpringBootApplication
+@EnableFeignClients
+public class EcommerceAddToCartTableApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(EcommerceAddToCartTableApplication.class, args);
+	}
+
+}
