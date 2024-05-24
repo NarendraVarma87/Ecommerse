@@ -11,6 +11,7 @@ import Login from './Components/Login';
 import Register from './Components/Register';
 import MainComponent from './Components/MainComponent';
 import UserProfile from './Components/Userprofile';
+import AddToCart from './Components/OrdersCart/AddToCart';
 
 function App() {
   const [username , setUsername] = useState('');
@@ -28,6 +29,7 @@ function App() {
           <Route path='/' element={<Login setUsername={setUsername}/>} />
           <Route path='/profile' element={<UserProfile username={username}/>}/>
           <Route path='/register' element={<Register/>} />
+          <Route path='/cart' element={<AddToCart/>}/>
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>

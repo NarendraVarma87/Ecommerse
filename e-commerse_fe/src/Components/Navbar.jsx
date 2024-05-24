@@ -31,7 +31,11 @@ const Navbar = ({ username }) => {
                 </ul>
               </li>
             </ul>
-            <Search/>
+            <div className='mx-3'>
+              <Link to='/cart' className='nav-link'>Cart</Link>
+            </div>
+            <div className='ms-3'><Search/></div>
+            
           </div>
         </div>
       </nav>
